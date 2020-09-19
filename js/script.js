@@ -46,9 +46,8 @@ let quotes = [
 
 
 function getRandomQuote() {
-  const randomNumber = Math.floor(Math.random() * (quotes.length) + 1);
+  const randomNumber = Math.floor(Math.random() * (quotes.length));
     return quotes[randomNumber][`quote`];
-    console.log(quotes[randomNumber][`quote`])
   };
 
 console.log(getRandomQuote());
@@ -57,7 +56,11 @@ console.log(getRandomQuote());
  * `printQuote` function
 ***/
 
+function printQuote() {
+  document.querySelector(`.quote`).innerHTML = `${getRandomQuote()}`;
+};
 
+printQuote();
 
 /***
  * click event listener for the print quote button
