@@ -19,7 +19,8 @@ let quotes = [
   },
   {quote: `Happiness is my success.`,
   source: `Jahnel Madarang`,
-  year: 2016
+  year: 2016,
+  tags: [`Adventure`, 'Positivity']
   },
   {quote: `I'm not faking I'm sick. I'm pretending I'm well.`,
   source: `Katrina Cook`,
@@ -64,7 +65,10 @@ function printQuote() {
       html += `<span class="citation"> ${quoteObject['citation']} </span>`;
   } if (quoteObject['year']) {
       html += `<span class ="year"> ${quoteObject['year']} </span>`;
-  } 
+  } if (quoteObject['tags']) {
+      html += `<span class="tags"><br> Tags: ${quoteObject['tags'].join(", ")} </span>`
+
+  }
   html += '</p>';
 
   document.getElementById('quote-box').innerHTML = html;
