@@ -45,7 +45,6 @@ let quotes = [
 
 function getRandomQuote() {
   const randomNumber = Math.floor(Math.random() * (quotes.length));
-    console.log(`Your random quote #${randomNumber} is "${quotes[randomNumber]['quote']}"`);
     return quotes[randomNumber];
   };
 
@@ -55,7 +54,7 @@ getRandomQuote();
  * `printQuote` function
 ***/
 
-function printQuote() {
+function printQuote(){
   let quoteObject = getRandomQuote();
   let html = `
     <p class ="quote"> ${quoteObject['quote']}</p>
@@ -78,10 +77,9 @@ function printQuote() {
   let green = Math.floor(Math.random() * 256);
   let randomRGB = `rgb(${red}, ${blue}, ${green})`;
   document.body.style.backgroundColor = randomRGB;
-  }
-  
+  };
 
- printQuote();
+  setInterval(printQuote, 4000);
 
 
 
