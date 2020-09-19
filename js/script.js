@@ -58,13 +58,13 @@ getRandomQuote();
 function printQuote() {
   let quoteObject = getRandomQuote();
   let html = `
-    <p class ="quote"> ${quoteObject['quote']} </p>
-    <p class ="source"> ${quoteObject['source']} `;
+    <p class ="quote"> ${quoteObject['quote']}</p>
+    <p class ="source"> ${quoteObject['source']}`;
 
   if (quoteObject['citation']) {
-      html += `<span class="citation"> ${quoteObject['citation']} </span>`;
+      html += `<span class="citation"> ${quoteObject['citation']}</span>`;
   } if (quoteObject['year']) {
-      html += `<span class ="year"> ${quoteObject['year']} </span>`;
+      html += `<span class ="year"> ${quoteObject['year']}</span>`;
   } if (quoteObject['tags']) {
       html += `<span class="tags"><br> Tags: ${quoteObject['tags'].join(", ")} </span>`
 
@@ -72,10 +72,17 @@ function printQuote() {
   html += '</p>';
 
   document.getElementById('quote-box').innerHTML = html;
+
+  let red = Math.floor(Math.random() * 256);
+  let blue = Math.floor(Math.random() * 256);
+  let green = Math.floor(Math.random() * 256);
+  let randomRGB = `rgb(${red}, ${blue}, ${green})`;
+  document.body.style.backgroundColor = randomRGB;
   }
   
 
  printQuote();
+
 
 
 /***
