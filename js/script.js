@@ -15,21 +15,21 @@ let quotes = [
   {quote: `If you don't build your dream someone else will hire you to help build theirs.`,
   source: `Tony A. Gaskins, Jr.`,
   citation: 'The Dream Chaser',
-  year: 2016,
+  year: 2016
   },
   {quote: `Happiness is my success.`,
   source: `Jahnel Madarang`,
-  year: 2016,
+  year: 2016
   },
   {quote: `I'm not faking I'm sick. I'm pretending I'm well.`,
   source: `Katrina Cook`,
   citation: 'A Loving Spoonful Nutrition',
-  year: 2020,
+  year: 2020
   },
   {quote: `It's so easy to laugh. It's so easy to hate. It takes strength to be gentle and kind.`,
   source: `Stephen Morrissey`,
   citation: `I Know It's Over. The Smiths.`,
-  year: 1986,
+  year: 1986
   },
   {quote: `Never get so busy making a living that you forget to make a life. `,
   source: `Unknown.`,
@@ -54,6 +54,24 @@ getRandomQuote();
  * `printQuote` function
 ***/
 
+function printQuote() {
+  let quoteObject = getRandomQuote();
+  let html = `
+    <p class ="quote"> ${quoteObject['quote']} </p>
+    <p class ="source"> ${quoteObject['source']} `;
+
+  if (quoteObject['citation']) {
+      html += `<span class="citation"> ${quoteObject['citation']} </span>`;
+  } if (quoteObject['year']) {
+      html += `<span class ="year"> ${quoteObject['year']} </span>`;
+  } 
+  html += '</p>';
+
+  document.getElementById('quote-box').innerHTML = html;
+  }
+  
+
+ printQuote();
 
 
 /***
