@@ -36,31 +36,25 @@ let quotes = [
   },
 ]
 
-// console.log(quotes);
-
 
 /***
  * `getRandomQuote` function
 ***/
 
 
-
 function getRandomQuote() {
   const randomNumber = Math.floor(Math.random() * (quotes.length));
-    return quotes[randomNumber][`quote`];
+    console.log(`Your random quote #${randomNumber} is "${quotes[randomNumber]['quote']}"`);
+    return quotes[randomNumber];
   };
 
-console.log(getRandomQuote());
+getRandomQuote();
 
 /***
  * `printQuote` function
 ***/
 
-function printQuote() {
-  document.querySelector(`.quote`).innerHTML = `${getRandomQuote()}`;
-};
 
-printQuote();
 
 /***
  * click event listener for the print quote button
