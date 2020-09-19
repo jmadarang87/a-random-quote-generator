@@ -11,7 +11,7 @@ project 1 - A Random Quote Generator
  * `quotes` array 
 ***/
 
-const quotes = [
+let quotes = [
   {quote: `If you don't build your dream someone else will hire you to help build theirs.`,
   source: `Tony A. Gaskins, Jr.`,
   citation: 'The Dream Chaser',
@@ -45,6 +45,13 @@ const quotes = [
 
 
 
+function getRandomQuote() {
+  const randomNumber = Math.floor(Math.random() * (quotes.length) + 1);
+    return quotes[randomNumber][`quote`];
+    console.log(quotes[randomNumber][`quote`])
+  };
+
+console.log(getRandomQuote());
 
 /***
  * `printQuote` function
