@@ -83,8 +83,8 @@ function printQuote(){
   document.body.style.backgroundColor = randomRGB;
   }
 
-// automatically calls printQuote() every 4 seconds
-setInterval(printQuote, 4000);
+// automatically calls printQuote() every 3 seconds
+setInterval(printQuote, 3000);
 
 // click event listener for the print quote button
 document.getElementById('load-quote').addEventListener("click", printQuote, false);
