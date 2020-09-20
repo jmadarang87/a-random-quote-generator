@@ -36,6 +36,10 @@ let quotes = [
   {quote: `Never get so busy making a living that you forget to make a life.`,
   source: `Unknown.`,
   },
+  {quote: `Fight for the things that you care about, but do it in a way that will lead others to join you.`,
+  source: `Ruth Bader Ginsburg`,
+  tags: ['Justice', 'Political', 'Leadership']
+  },
 ]
 
 /*
@@ -71,7 +75,6 @@ function printQuote(){
   html += '</p>';
   // returns full html string in quote-box id
   document.getElementById('quote-box').innerHTML = html;
-
   // creates a random RGB color and changes background to that color
   let red = Math.floor(Math.random() * 256);
   let blue = Math.floor(Math.random() * 256);
