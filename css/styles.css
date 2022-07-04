@@ -3,12 +3,15 @@
  * Random Quote Generator - CSS
  */
 
- @import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Rampart+One&display=swap');
+
+/* font-family: 'Open Sans', sans-serif;
+font-family: 'Rampart One', cursive; */
 
 body {
   background-color: rgb(58, 193, 98);
   color: white;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Rampart One', cursive;
   padding: 5px;
 }
 
@@ -24,10 +27,12 @@ header {
 
 h1 {
   text-shadow: 1px 1px 1px rgba(50, 50, 50, 0.3);
+  font-family: 'Open Sans', sans-serif
 }
 
 .load-quote {
   color: #fff;
+  font-family: 'Open Sans', sans-serif;
   text-shadow: 1px 1px 1px rgba(50, 50, 50, 0.3);
   width: 12em;
   max-height: 75px;
@@ -90,6 +95,7 @@ h1 {
 }
 
 .source {
+  font-family: 'Open Sans', sans-serif;
   font-size: 1rem;
   letter-spacing: 0.05em;
   line-height: 1.1;
