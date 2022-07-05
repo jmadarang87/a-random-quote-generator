@@ -1,9 +1,10 @@
 # A Random Quote Generator
 Selects and displays a random quote (from static array) and changes the RGB background every 3 seconds. Can also update quote and background color with the click of a button. 
+
 [Live demo can be found on Heroku.](https://random-quote-generator-jm.herokuapp.com/)
 
 ## Technologies Used
-JavaScript, HTML.
+* JavaScript, HTML
 
 ## What I learned
 * Array of Objects
